@@ -48,9 +48,17 @@ img {
     object-fit: cover;
 }
 
+#device::before {
+    content: "Mobile";
+}
+
 @media (min-width: 600px) {
     #pictures {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #device::before {
+        content: "Tablet";
     }
 }
 
@@ -58,6 +66,18 @@ img {
     #pictures {
         grid-template-columns: 1fr 1fr 1fr;
         width: 80%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #device::before {
+        content: "Desktop";
     }
 }
 
